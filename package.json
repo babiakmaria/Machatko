@@ -1,0 +1,25 @@
+{
+  "name": "new-project",
+  "version": "1.0.0",
+  "description": "maska's project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maska",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "cypress": "^13.14.2",
+    "eslint": "^9.10.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "storybook": "^8.3.0",
+    "webpack": "^5.94.0",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
