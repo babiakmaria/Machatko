@@ -1,9 +1,10 @@
 import React from 'react';
-import * as styles from './App.css';
+import styles from './App.css';
+import Header from './components/Header';
 
 const App = () => {
-return (
-    <div className="main"> My first application</div>
+  return (
+    <div className={styles.main}>My first application</div>
   )
 };
 
