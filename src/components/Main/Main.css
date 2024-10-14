@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--body-font);
+}
+:root{
+    --body-font: "Montserrat", sans-serif;
+}
+.main {
+    min-height: 650px;
+    overflow: hidden;
+    position: relative;
+}
+/*big project`s name*/
+.logoName1,
+.logoName3 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 130px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+}
+.logoName2 {
+    position: absolute;
+    transform: translate(-30%, -50%);
+    color: white;
+    font-size: 130px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10; 
+}
+.mainLogo {
+    position: absolute;
+    transform: translate(-30%, -50%);
+    height: 130px;
+    width: 130px;
+    z-index: 10; 
+}
+.logoName1 {
+    top: 15%;
+    left: 15%;
+}
+.logoName2 {
+    top: 30%;
+    left: 15%;
+}
+.logoName3 {
+    top: 45%;
+    left: 11%;
+}
+.mainLogo {
+    top: 45%;
+    left: 16%; 
+}
+
+.description {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 500px;
+    top: 55%;
+    left: 8%;
+    z-index: 10; 
+}
+/*button decor*/
+.startButton {
+    position: absolute;
+    padding: 15px 35px;
+    height: 80px;
+    width: 250px;
+    background-color: #F7A99B;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    bottom: 20%;
+    right: 15%;
+    transition: background-color 0.3s ease;
+}
+.startButton:hover {
+    background-color: #640D14;
+    color: white;
+}
+/*paws*/
+.paw1,
+.paw2,
+.paw3,
+.paw4,
+.paw5,
+.paw6 {
+    position: absolute;
+    z-index: 9;
+}
+
+.paw1 {
+    right: 400px;
+    bottom: 20px;
+    height: 560px;
+    width: 560px;
+    transform: rotate(340deg);
+    opacity: 0.5;
+}
+.paw2 {
+    right: 400px;
+    bottom: 300px;
+    height: 80px;
+    width: 80px;
+    transform: rotate(340deg);
+    opacity: 0.8;
+}
+.paw3 {
+    right: 330px;
+    bottom: 250px;
+    height: 50px;
+    width: 50px;
+    transform: rotate(45deg);
+    opacity: 0.2;
+}
+.paw4 {
+    right: 200px;
+    top: 200px;
+    height: 90px;
+    width: 90px;
+    transform: rotate(45deg);
+    opacity: 0.5;
+}
+.paw5 {
+    right: 200px;
+    top: 30px;
+    height: 210px;
+    width: 210px;
+    transform: rotate(10deg);
+    opacity: 0.8;
+}
+.paw6 {
+    right: 100px;
+    top: 5px;
+    height: 120px;
+    width: 120px;
+    transform: rotate(340deg);
+    opacity: 0.2;
+}
+/*gradient*/
+.main div{
+    position: absolute;
+    border-radius: 48px;
+}
+
+.main div:nth-child(1){
+    height: 100%;
+    width: 100%;
+    background-color: #A1FFD7;
+}
+.main div:nth-child(2){
+    height: 80%;
+    width: 40%;
+    background-color: #FFFFFF;
+    top: -12%;
+    right: -12%;
+}
+.main div:nth-child(3){
+    height: 80%;
+    width: 70%;
+    background-color: #00CBD4;
+    top: 10%;
+    right: 12%;
+}
+.main div:nth-child(4){
+    height: 70%;
+    width: 75%;
+    background-color: #F08080;
+    bottom: -10%;
+    left: -5%;
+}
+.main div:nth-child(5){
+    height: 65%;
+    width: 70%;
+    background-color: #13d6da;
+    bottom: -15%;
+    right: -20%;
+}
+.main div:nth-child(6){
+    height: 70%;
+    width: 65%;
+    background-color: #6AFFF4;
+    bottom: 0;
+    right: -50%;
+}
+.main::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(200px);
+}
+/*.gradient{
+  background: linear-gradient(
+      217deg,
+      rgb(19 214 218 / 90%),
+      rgb(255 0 0 / 0%) 70.71%
+    ),
+    linear-gradient(127deg, rgb(240 128 128 / 100%), rgb(240 128 128 / 60%) 70.71%),
+    linear-gradient(336deg, rgb(161 255 215 / 100%), rgb(161 255 215 / 40%) 70.71%),
+    linear-gradient(90deg, rgb(255 255 255 / 80%), rgb(255 255 255 / 0%) 50%);
+}*/

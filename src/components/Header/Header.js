@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../App.css';
+import styles from './Header.css';
 
 export default function Header() {
     return (
@@ -9,7 +9,7 @@ export default function Header() {
             </div>
             <nav>
                 <ul className={styles.navList}>
-                    <li><a href="#">Компаньйони</a></li>
+                    <li><a href="#"> Каталог</a></li>
                     <li><a href="#">Про нас</a></li>
                 </ul>
             </nav>
@@ -19,7 +19,6 @@ export default function Header() {
                      <li><a href="#"><img src="/user.png" alt="login" className={styles.user}/></a></li>
                 </ul>
             </div>
-            <div className={styles.underline}></div>
         </div>
     );
 }
