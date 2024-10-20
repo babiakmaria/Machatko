@@ -14,6 +14,9 @@ const config = {
         'plugin:cypress/recommended',
     ],
     settings: {
+        react: {
+            version: 'detect',
+        },
         'import/resolver': {
             node: {
                 extensions: ['.js', '.jsx'],

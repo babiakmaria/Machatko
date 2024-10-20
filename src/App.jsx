@@ -1,15 +1,27 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Header from './components/MainPage/Header';
+import Main from './components/MainPage/Main';
+import Catalog from './pages/Catalog';
 
 const App = () => {
-  return (
-    <>
-    <Header></Header>
-    <Main></Main>
-    </>
-   // <div className={styles.main}>My first application</div>
-  )
+    return (
+        <Router>
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <Header />
+                            <Main />
+                        </>
+                    }
+                />
+                <Route path="/catalog" element={<Catalog />} />
+            </Routes>
+        </Router>
+    );
 };
 
 export default App;

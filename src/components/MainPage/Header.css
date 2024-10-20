@@ -7,11 +7,11 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--body-font);
 }
-:root{
-    --body-font: "Montserrat", sans-serif;
+:root {
+    --body-font: 'Montserrat', sans-serif;
 }
 .header {
     width: 100%;
@@ -22,7 +22,7 @@ body{
     background-color: #f8ad9d;
     border-bottom: 5px solid #fff;
 }
-.logoContainer{
+.logoContainer {
     display: flex;
     align-items: center;
     margin-right: 20px;
@@ -31,39 +31,39 @@ body{
     height: 70px;
     width: 70px;
 }
-.navList{
+.navList {
     display: flex;
     align-items: center;
     gap: 20px;
     height: 100%;
 }
 
-.navList li a{
-    color:black;
+.navList li a {
+    color: black;
     font-weight: bold;
     background-color: white;
     padding: 8px;
     border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
-.navList li a:hover{
-    background-color: #640D14;
+.navList li a:hover {
+    background-color: #640d14;
     color: white;
 }
-
 
 .iconsContainer {
     display: flex;
     align-items: center;
     margin-left: auto;
 }
-.icons{
+.icons {
     display: flex;
     gap: 15px;
 }
 .moon,
-.user{
+.user {
     width: 30px;
-    height: 30px; 
+    height: 30px;
 }
-
