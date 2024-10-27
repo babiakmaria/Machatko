@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--body-font);
+}
+:root {
+    --body-font: 'Montserrat', sans-serif;
+}
+.main {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFF5EC;
+}
+.heartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bigHeart {
+    width: 200px;
+}

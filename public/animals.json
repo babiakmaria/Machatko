@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Нік",
+        "image": "1.jpg",
+        "type": "dog"
+    },
+    {
+        "id": 2,
+        "name": "Скубі",
+        "image": "2.jpg",
+        "type": "dog"
+    },
+    {
+        "id": 3,
+        "name": "Джордж",
+        "image": "3.jpg",
+        "type": "dog"
+    },
+    {
+        "id": 4,
+        "name": "Лілі",
+        "image": "4.jpg",
+        "type": "cat"
+    },
+    {
+        "id": 5,
+        "name": "Челсі",
+        "image": "5.jpg",
+        "type": "dog"
+    },
+    {
+        "id": 6,
+        "name": "Міла",
+        "image": "6.jpg",
+        "type": "cat"
+    },
+    {
+        "id": 7,
+        "name": "Робін",
+        "image": "7.jpg",
+        "type": "криса"
+    },
+    {
+        "id": 8,
+        "name": "Чері і Клео",
+        "image": "8.jpg",
+        "type": "cat"
+    },
+    {
+        "id": 9,
+        "name": "Одін",
+        "image": "9.jpg",
+        "type": "єнот"
+    },
+    {
+        "id": 10,
+        "name": "Афіна",
+        "image": "10.jpg",
+        "type": "cat"
+    }
+]

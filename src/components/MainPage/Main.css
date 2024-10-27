@@ -13,7 +13,7 @@ body {
     --body-font: 'Montserrat', sans-serif;
 }
 .main {
-    min-height: 650px;
+    min-height: 100vh;
     overflow: hidden;
     position: relative;
 }
