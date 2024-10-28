@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './components/MainPage/Header';
 import Main from './components/MainPage/Main';
-import Catalog from './pages/Catalog';
 import About from './pages/About';
-import Login from './pages/Login';
+import Catalog from './pages/Catalog';
 import Liked from './pages/Liked';
+import Login from './pages/Login';
 
 const App = () => {
     return (
