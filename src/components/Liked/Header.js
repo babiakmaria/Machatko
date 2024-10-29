@@ -7,6 +7,7 @@ export default function Header() {
     return (
         <div className={styles.header}>
             <div className={styles.logoContainer}>
+                <img src="/circle.png" className={styles.circle}/>
                 <img src="/cat.png" alt="Logo" className={styles.logo} />
             </div>
             <nav>
@@ -22,18 +23,13 @@ export default function Header() {
             <div className={styles.iconsContainer}>
                 <ul className={styles.icons}>
                     <li>
-                        <Link to="/liked">
-                            <img src="/heartWhite.png" alt="liked items" className={styles.heart} />
-                        </Link>
-                    </li>
-                    <li>
                         <a href="#">
-                            <img src="/moon.png" alt="dark theme" className={styles.moon} />
+                            <img src="/moonPink.png" alt="dark theme" className={styles.moon} />
                         </a>
                     </li>
                     <li>
                         <Link to="/login">
-                            <img src="/user.png" alt="login" className={styles.user} />
+                            <img src="/userPink.png" alt="login" className={styles.user} />
                         </Link>
                     </li>
                 </ul>
