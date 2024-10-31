@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './Header.css';
+import Popup from '../Liked/Popup.js';
 
 export default function Header() {
+    const [showPopup, setShowPopup] = useState(false);
+
+    const togglePopup = () => {
+        setShowPopup(!showPopup);
+    };
+
     return (
         <div className={styles.header}>
             <div className={styles.logoContainer}>
+                <Link to="/">
                 <img src="/circle.png" className={styles.circle}/>
-                <img src="/cat.png" alt="Logo" className={styles.logo} />
+                <img src="/cat.png" alt="Logo" className={styles.logo} /></Link>
             </div>
             <form>
                 <div className={styles.search}>
@@ -19,14 +27,9 @@ export default function Header() {
             <div className={styles.iconsContainer}>
                 <ul className={styles.icons}>
                     <li>
-                        <Link to="/liked">
+                    <a onClick={togglePopup} className={styles.heartButton}>
                             <img src="/heartPink.png" alt="liked items" className={styles.heart} />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="#">
-                            <img src="/moonPink.png" alt="dark theme" className={styles.moon1} />
-                        </Link>
+                        </a>
                     </li>
                     <li>
                         <Link to="/login">
@@ -35,6 +38,7 @@ export default function Header() {
                     </li>
                 </ul>
             </div>
+            {showPopup && <Popup togglePopup={togglePopup} />}
         </div>
     );
 }

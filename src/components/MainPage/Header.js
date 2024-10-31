@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './Header.css';
+import Popup from '../Liked/Popup.js';
 
 export default function Header() {
+    const [showPopup, setShowPopup] = useState(false);
+
+    const togglePopup = () => {
+        setShowPopup(!showPopup);
+    };
+
     return (
         <div className={styles.header}>
             <div className={styles.logoContainer}>
@@ -22,13 +29,8 @@ export default function Header() {
             <div className={styles.iconsContainer}>
                 <ul className={styles.icons}>
                     <li>
-                        <Link to="/liked">
+                        <a onClick={togglePopup} className={styles.heartButton}>
                             <img src="/heartWhite.png" alt="liked items" className={styles.heart} />
-                        </Link>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="/moon.png" alt="dark theme" className={styles.moon} />
                         </a>
                     </li>
                     <li>
@@ -38,6 +40,7 @@ export default function Header() {
                     </li>
                 </ul>
             </div>
+            {showPopup && <Popup togglePopup={togglePopup} />}
         </div>
     );
 }
