@@ -37,6 +37,43 @@ body {
     gap: 20px;
     height: 100%;
 }
+.logoutButton {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+.navList li button:hover {
+    background-color: #640d14;
+    color: white;
+}
+.successMessage {
+    background-color: #d4edda; 
+    color: #155724; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
 .navList li a {
     color: black;

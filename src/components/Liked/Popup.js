@@ -8,7 +8,7 @@ export default function Popup({ togglePopup }) {
 
     const handleRedirect = () => {
         togglePopup(); 
-        navigate("/login"); 
+        navigate("/signup"); 
     };
 
     return (

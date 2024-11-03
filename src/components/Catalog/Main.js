@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from 'react';
+import useFetch from '../../hooks/useFetch';
 
 import styles from './Main.css';
+import AnimalCard from './AnimalCard.js';
 
-export default function Main() {
+export default function Main({ searchTerm, likedAnimals, toggleLiked }) {
+    const { animals, loading, error } = useFetch();
 
-    const [animals, setAnimals] = useState([]);
-    useEffect(() => {
-        fetch("/animals.json")
-        .then(response => response.json())
-        .then(data => setAnimals(data))
-    }, []);
+    const filteredAnimals = animals.filter((animal) => animal.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    if (loading) return <p>Loading animals...</p>;
+    if (error) return <p>Error: {error}</p>;
+
     return (
         <div className={styles.main}>
             <div className={styles.animalsGrid}>
-                {
-                    animals.map(animal => (
-                        <div key={animal.id} className={styles.animalCard}>
-                            <img src={`images/${animal.image}`} alt={animal.name} />
-                            <div className={styles.animalCardInfo}>
-                                <h3 className={styles.name}>{animal.name}</h3>
-                                <p className={styles.type}>{animal.type}</p> 
-                            </div>
-                        </div>
-                    ))
-                }
+                {filteredAnimals.map((animal) => (
+                    <AnimalCard
+                        animal={animal}
+                        key={animal.id}
+                        isLiked={likedAnimals.includes(animal.id)}
+                        toggleLiked={toggleLiked}
+                    />
+                ))}
             </div>
         </div>
     );

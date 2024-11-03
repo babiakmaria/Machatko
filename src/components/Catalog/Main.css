@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +7,7 @@
 }
 body {
     font-family: var(--body-font);
+    background-color: #fff5ec;
 }
 :root {
     --body-font: 'Montserrat', sans-serif;
@@ -18,6 +18,7 @@ body {
     position: relative;
     background-color: #fff5ec;
 }
+
 .animalsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
@@ -63,3 +64,18 @@ body {
 .type {
     color: white; 
 }
+
+.animalCard .heartWhite {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    cursor: pointer;
+    width: 40px;
+    z-index: 1;
+    object-fit: contain;
+}
+.animalCard input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
