@@ -1,30 +1,58 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth } from '../firebase.js';
+import { signInWithEmailAndPassword  } from 'firebase/auth';
 
-import styles from './Main.css';
+import styles from '../SignUp/Main.css';
+
 
 export default function Main() {
+    const[email, setEmail] = useState("");
+    const[password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+          await signInWithEmailAndPassword (auth, email, password);
+          console.log("user logged in successfully")
+          navigate('/liked');
+        } catch (error) {
+            console.log("Login error:", error.message);
+            setError("Wrong email or password");
+        }
+    };
+
     return (
         <div className={styles.main}>
         <div className={styles.left}>
         <Link to="/"><img src="/cat.png" alt="Logo" className={styles.logo} /></Link>
-            <h1 className={styles.welcome}>Welcome</h1>
-            <div className={styles.textContainer}>
-                <p className={styles.signupText}>You can sign up here and explore the benefits of doing so!</p>
+            <h1 className={styles.welcome}>Welcome back!</h1>
+        </div>
+            <div className={styles.right}>
+                <h1 className={styles.signup}>З поверненням!</h1>
+                    <form className={styles.signupContainer} onSubmit={handleLogin}>
+                        <input type="text" 
+                        name="email" 
+                        placeholder="Введіть свій email" 
+                        className={styles.email} 
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)} 
+                        />
+                    
+                        <input type="password" 
+                        name="password" 
+                        placeholder="Введіть пароль" 
+                        className={styles.password} 
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <button type="submit" className={styles.registerbtn}>Увійти</button>
+                    </form>
+                    {error && <p className={styles.error}>{error}</p>}
             </div>
-        </div>
-        <div className={styles.right}>
-            <h1 className={styles.signup}>Створіть свій аккаунт</h1>
-                <div className={styles.signupContainer}>
-                    <input type="text" placeholder="Введіть своє ім'я" className={styles.name} required></input>
-
-                    <input type="text" placeholder="Введіть свій email" className={styles.email} required></input>
-                
-                    <input type="password" placeholder="Створіть пароль" className={styles.password} required></input>
-                    <button type="submit" className={styles.registerbtn}>зареєструватись</button>
-                </div>
-            
-        </div>
         </div>
     );
 }

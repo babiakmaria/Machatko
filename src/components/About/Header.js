@@ -19,9 +19,9 @@ export default function Header() {
             <div className={styles.iconsContainer}>
                 <ul className={styles.icons}>
                     <li>
-                        <a href="#">
+                        <Link to="/signup">
                             <img src="/user.png" alt="login" className={styles.user} />
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

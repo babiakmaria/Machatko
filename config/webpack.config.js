@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const basicConfig = {
+    mode: 'development',
     entry: path.resolve(__dirname, '../src/index.js'),
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -30,6 +31,17 @@ const basicConfig = {
                         },
                     },
                 ],
+            },
+            {
+                test: /\.module\.css$/i, 
+                use: ['style-loader', {
+                    loader: 'css-loader',
+                    options: {
+                        modules: {
+                            localIdentName: '[name]__[local]--[hash:base64:5]',
+                    },
+                },
+            }],
             },
         ],
     },
