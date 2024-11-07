@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useFetch from '../../hooks/useFetch';
 
 import styles from './Main.css';
 import AnimalCard from './AnimalCard.js';
 
-export default function Main({ searchTerm, likedAnimals, toggleLiked }) {
+export default function Main({ searchTerm = "", likedAnimals, toggleLiked }) {
     const { animals, loading, error } = useFetch();
 
     const filteredAnimals = animals.filter((animal) => animal.name.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -13,8 +13,8 @@ export default function Main({ searchTerm, likedAnimals, toggleLiked }) {
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <div className={styles.main}>
-            <div className={styles.animalsGrid}>
+        <main className={styles.main}>
+            <div className={styles.animalsGrid} data-testid="animalsGrid">
                 {filteredAnimals.map((animal) => (
                     <AnimalCard
                         animal={animal}
@@ -24,6 +24,6 @@ export default function Main({ searchTerm, likedAnimals, toggleLiked }) {
                     />
                 ))}
             </div>
-        </div>
+        </main>
     );
 }

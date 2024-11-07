@@ -2,6 +2,8 @@ const { defineConfig } = require('cypress');
 const webpackConfig = require('./config/webpack.cypress.config');
 
 module.exports = defineConfig({
+    viewportWidth: 1440,
+    viewportHeight: 800,
     component: {
         devServer: {
             framework: 'react',
@@ -19,6 +21,7 @@ module.exports = defineConfig({
     },
 
     e2e: {
+        baseUrl: 'http://localhost:4000',
         setupNodeEvents(on, config) {
             // implement node event listeners here
             return config;
