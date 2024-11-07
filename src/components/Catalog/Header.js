@@ -15,7 +15,7 @@ export default function Header({ searchTerm, setSearchTerm }) {
     }
 
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={styles.logoContainer}>
                 <Link to="/">
                 <img src="/circle.png" className={styles.circle}/>
@@ -36,7 +36,7 @@ export default function Header({ searchTerm, setSearchTerm }) {
             <div className={styles.iconsContainer}>
                 <ul className={styles.icons}>
                     <li>
-                        <a onClick={handleLikedItems} className={styles.heartButton}>
+                        <a onClick={handleLikedItems} className={styles.heartButton} data-cy="heart-button">
                             <img src="/heartPink.png" alt="liked items" className={styles.heart} />
                         </a> 
                     </li>
@@ -48,6 +48,6 @@ export default function Header({ searchTerm, setSearchTerm }) {
                 </ul>
             </div>
             {showPopup && <Popup togglePopup={() => setShowPopup(false)} />}
-        </div>
+        </header>
     );
 }

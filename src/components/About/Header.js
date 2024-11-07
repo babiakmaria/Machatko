@@ -5,11 +5,11 @@ import styles from './Header.css';
 
 export default function Header() {
     return (
-        <div className={styles.header}>
-            <div className={styles.logoContainer}>
+        <header className={styles.header}>
+            <div className={styles.logoContainer} >
                 <Link to="/"><img src="/cat.png" alt="Logo" className={styles.logo} /></Link>
             </div>
-            <nav>
+            <nav data-testid="existingNav">
                 <ul className={styles.navList}>
                     <li>
                         <Link to="/catalog"> Каталог</Link>
@@ -25,6 +25,6 @@ export default function Header() {
                     </li>
                 </ul>
             </div>
-        </div>
+        </header>
     );
 }

@@ -19,7 +19,7 @@ export default function Header() {
     };
 
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={styles.logoContainer}>
                 <img src="/cat.png" alt="Logo" className={styles.logo} />
             </div>
@@ -33,7 +33,7 @@ export default function Header() {
                     </li>
                     {currentUser.isAuthenticated && (
                         <li>
-                            <button onClick={handleLogout} className={styles.logoutButton}>
+                            <button onClick={handleLogout} className={styles.logoutButton} data-testid="logout">
                                 Вихід
                             </button>
                         </li>
@@ -60,6 +60,6 @@ export default function Header() {
                 </ul>
             </div>
             {showPopup && <Popup togglePopup={() => setShowPopup(false)} />}
-        </div>
+        </header>
     );
 }

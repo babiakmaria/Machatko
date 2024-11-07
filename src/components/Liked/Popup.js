@@ -12,11 +12,11 @@ export default function Popup({ togglePopup }) {
     };
 
     return (
-        <div className={styles.popup} >
+        <div className={styles.popup}>
             <div className={styles.overlay} onClick={togglePopup}></div>
             <div className={styles.content}>
             <a className={styles.exit}  onClick={togglePopup}><img src="/close.png" /></a>
-                <h2>Oops</h2>
+                <h2 data-testid="popup">Oops</h2>
                 <div className={styles.textImage}>
                     <p>для того, щоб виконати цю дію вам потрібно зареєструватись</p>
                     <img src="/puzzle.png" alt="puzzle icon" className={styles.puzzle} />
