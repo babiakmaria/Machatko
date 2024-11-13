@@ -12,13 +12,14 @@ export default function AnimalCard({ animal, isLiked, toggleLiked }) {
     };
 
     return (
-        <div key={animal.id} className={styles.animalCard}>
+        <div key={animal.id} className={styles.animalCard} data-testid="animalCard">
             <img
                 src={isLiked ? '/filledHeart.png' : '/heartWhite.png'}
                 onClick={handleClick}
                 className={styles.heartWhite}
+                data-testid="heart-button"
             />
-            <img src={`images/${animal.image}`} alt={animal.name} onError={handleError} />
+            <img src={`images/${animal.image}`} alt={animal.name} onError={handleError} data-testid="animal-image"/>
             <div className={styles.animalCardInfo}>
                 <h3 className={styles.name}>{animal.name}</h3>
                 <p className={styles.type}>{animal.type}</p>

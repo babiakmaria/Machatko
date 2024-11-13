@@ -5,7 +5,7 @@ import styles from './Main.css';
 
 export default function Main() {
     return (
-        <div className={styles.main}>
+        <main className={styles.main} data-testid="main-container">
             <div></div>
             <div></div>
             <div></div>
@@ -30,6 +30,6 @@ export default function Main() {
             <img src="/pawBlack.png" alt="paw" className={styles.paw4} />
             <img src="/pawPink.png" alt="paw" className={styles.paw5} />
             <img src="/pawBlack.png" alt="paw" className={styles.paw6} />
-        </div>
+        </main>
     );
 }

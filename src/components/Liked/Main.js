@@ -6,7 +6,7 @@ import AnimalCard from '../Catalog/AnimalCard.js';
 
 export default function Main({ animals = [], likedAnimals = [], toggleLiked }) {
     return (
-        <div className={styles.main}>
+        <div className={styles.main} data-testid="likedList">
             <div className={styles.heartContainer}>
                 <img src="/heartRed.png" alt="heart" className={styles.bigHeart} />
             </div>

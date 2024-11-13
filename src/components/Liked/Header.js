@@ -5,7 +5,7 @@ import styles from './Header.css';
 
 export default function Header() {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={styles.logoContainer}>
                 <Link to="/">
                 <img src="/circle.png" className={styles.circle}/>
@@ -31,6 +31,6 @@ export default function Header() {
                     </li>
                 </ul>
             </div>
-        </div>
+        </header>
     );
 }

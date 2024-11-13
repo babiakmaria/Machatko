@@ -40,6 +40,7 @@ export default function Main() {
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)} 
+                        data-testid="email"
                         />
                     
                         <input type="password" 
@@ -48,8 +49,9 @@ export default function Main() {
                         className={styles.password} 
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        data-testid="password"
                         />
-                        <button type="submit" className={styles.registerbtn}>Увійти</button>
+                        <button type="submit" className={styles.registerbtn} data-testid="submit">Увійти</button>
                     </form>
                     {error && <p className={styles.error}>{error}</p>}
             </div>
